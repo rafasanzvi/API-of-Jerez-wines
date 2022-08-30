@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 require("dotenv").config() //to customise environment variables in .env
 const userRoutes = require('./routes/user.route')
+const wineRoutes = require('./routes/wine.route')
 
 const app = express();
 const port = process.env.PORT || 9000 //Server in port 9000
@@ -10,6 +11,7 @@ const port = process.env.PORT || 9000 //Server in port 9000
 // middleware
 app.use(express.json())
 app.use('/api', userRoutes)
+app.use('/api', wineRoutes)
 
 //Routes
 app.get('/', (req, res) => {
