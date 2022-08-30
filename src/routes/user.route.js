@@ -49,7 +49,15 @@ router.put('/users/:id', (req, res) => {
 
 
 //Delete 
+router.delete('/users/:id', (req, res) => {
 
+    const { id } = req.params
+
+    userSchema
+        .findByIdAndDelete(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
 
 
 

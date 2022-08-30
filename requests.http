@@ -3,10 +3,10 @@ POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "David Sanchez",
-    "age": "26",
-    "email": "davidsanchezvillanueva@gmail.com",
-    "origin": "Jerez de la fra."
+    "name": "olivita",
+    "age": "31",
+    "email": "rafasv41@gmail.com",
+    "origin": "España"
 }
 
 ###
@@ -28,3 +28,12 @@ Content-Type: application/json
     "email": "rafasv41@gmail.com",
     "origin": "España"
 }
+
+
+###
+
+DELETE  http://localhost:9000/api/users/630e3eacd761a0e94939870b HTTP/1.1
+
+
+
+
