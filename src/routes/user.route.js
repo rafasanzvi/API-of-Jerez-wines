@@ -14,5 +14,25 @@ router.post('/users', (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+//Get all users
+router.get('/users', (req, res) => {
+
+    userSchema
+        .find()
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
+//Get a user
+router.get('/users/:id', (req, res) => {
+
+    const { id } = req.params
+
+    userSchema
+        .findById(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
 
 module.exports = router;
