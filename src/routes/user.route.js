@@ -1,7 +1,9 @@
-const express = require("express")
+// const express = require("express")
+// const router = express.Router()
+const router = require("express").Router()//Refactoring
 const userSchema = require("../models/user.model")
 
-const router = express.Router()
+
 
 //Create user
 router.post('/users', (req, res) => {
