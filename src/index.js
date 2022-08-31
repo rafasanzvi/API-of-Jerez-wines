@@ -15,7 +15,6 @@ app.use('/api', wineRoutes)
 
 //Routes
 app.get('/', (req, res) => {
-    res.send("<h1>Hiiiiiiiii!!!!</h1>")
 })
 
 // Mongodb connection
