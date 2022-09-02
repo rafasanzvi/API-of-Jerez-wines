@@ -1,28 +1,32 @@
 /* const express = require('express')
 const router = express.Router() */
-const router = require('express').Router()
-const Wine = require('../models/wine.model')
+const router = require("express").Router()
+/* const Wine = require('../models/wine.model') */
+const wineSchema = require("../models/wine.model")
 
-router.get("/wines", (req, res) => {
+router.post('/wines', (req, res) => {
 
-    Wine
+    /* const { nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL } = req.body */
+    const wine = wineSchema(req.body)
+
+    wine
+        .save()
+        .then(data => res.json(data))
+        .catch(error => res.json({ message: error }));
+});
+
+router.get('/wines', (req, res) => {
+
+    wineSchema
         .find()
-        .then(response => res.json(response))
-        .catch(err => res.status(500).json(err))
-})
-
-router.post("/create", (req, res) => {
-
-    const { nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL } = req.body
-
-    Wine
-        .create({ nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL })
-        .then(response => res.json(response))
-        .catch(err => res.status(500).json(err))
-})
+        .then(data => res.json(data))
+        .catch(error => res.json({ message: error }));
+});
 
 
 
 
 
-module.exports = router
+
+
+module.exports = router;

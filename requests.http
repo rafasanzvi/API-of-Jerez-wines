@@ -6,7 +6,7 @@ Content-Type: application/json
     "name": "olivita",
     "age": "31",
     "email": "rafasv41@gmail.com",
-    "origin": "España"
+    "origin": "Holanda"
 }
 
 ###
@@ -45,13 +45,13 @@ POST http://localhost:9000/api/wines HTTP/1.1
 Content-Type: application/json
 
 {
-    "nameOfWine": "oliiii",
+    "nameOfWine": "Rio Viejo",
     "typeOfWine": "Fino",
-    "winery": "olololol",
+    "winery": "ololololdfgdfg",
     "typeOfGrape": "Palomino",
-    "description": "sfsddsfsd",
-    "alcoholStrength": "15",
-    "imgURL": "sdfsdfsd"
+    "description": "sfsddsfsddfg",
+    "alcoholStrength": "16",
+    "imgURL": "sdfsdfsddgd"
 }
 
 ###
