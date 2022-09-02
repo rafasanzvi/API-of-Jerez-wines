@@ -13,11 +13,16 @@ router.get("/wines", (req, res) => {
 
 router.post("/create", (req, res) => {
 
+    const { nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL } = req.body
 
+    Wine
+        .create({ nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL })
+        .then(response => res.json(response))
+        .catch(err => res.status(500).json(err))
 })
 
 
 
 
 
-module.exports = router;
+module.exports = router

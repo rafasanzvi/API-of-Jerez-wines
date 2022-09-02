@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose")
 
 const wineSchema = new Schema(
     {
-        name: {
+        nameOfWine: {
             type: String,
             required: [true, "You must fill the name of the wine"]
         },
