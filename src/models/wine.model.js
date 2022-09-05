@@ -29,10 +29,18 @@ const wineSchema = mongoose.Schema({
         type: Number,
         required: [true, "You must fill the alcoholic strength"]
     },
+    winePairing: {
+        type: String,
+        required: [true, "You must tell about wine pairing"]
+    },
     imgURL: {
         type: String
+    },
+},
+    {
+        timestamps: true,
     }
-});
+);
 
 /* const Wine = model("Wine", wineSchema)
 module.exports = Wine */

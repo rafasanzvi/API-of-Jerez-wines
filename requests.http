@@ -45,13 +45,13 @@ POST http://localhost:9000/api/wines HTTP/1.1
 Content-Type: application/json
 
 {
-    "nameOfWine": "Río Viejo",
-    "typeOfWine": "Oloroso",
-    "winery": "Pedro Domecq",
+    "nameOfWine": "Península",
+    "typeOfWine": "Palo Cortado",
+    "winery": "Lustau",
     "typeOfGrape": "Palomino",
-    "description": "Deep and brilliant amber colour, elegant aromas of long ageing and great evolved vinosity. In the mouth it is round, velvety, dry, very long and with an elegant finish.",
+    "description": "With a marked hazelnut flavour and hints of vanilla, coffee and dark chocolate. Dry and very concentrated, with a long and elegant finish. This Palo Cortado combines the finesse and delicacy of an Amontillado with the body and richness of an Oloroso. Aged in Jerez de la Frontera in the cellar of the Empress Eugenia.",
     "alcoholStrength": "19",
-    "imgURL": "https://www.santacecilia.es/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/a/santa-cecilia-rio-viejo-oloroso-seco_5.jpg"
+    "imgURL": "https://versosyvino.com/845-large_default/lustau-palo-cortado-peninsula.jpg"
 }
 
 ###
@@ -63,22 +63,25 @@ GET http://localhost:9000/api/wines HTTP/1.1
 GET http://localhost:9000/api/wines/6312417abfaf36399c44218a HTTP/1.1
 
 ###
-PUT  http://localhost:9000/api/wines/631251ff5f8c330c9aa0b5ab HTTP/1.1
+PUT  http://localhost:9000/api/wines/631603d78f372bbe5f5afbbd HTTP/1.1
 Content-Type: application/json
 
 {
-    "nameOfWine": "Río Viejo EL MEJORE",
-    "typeOfWine": "Fino",
-    "winery": "ololololdfgdfg",
+    "nameOfWine": "Río Viejo",
+    "typeOfWine": "Oloroso",
+    "winery": "Pedro Domecq",
     "typeOfGrape": "Palomino",
-    "description": "sfsddsfsddfg",
-    "alcoholStrength": "16",
-    "imgURL": "sdfsdfsddgd"
+    "description": "Deep and brilliant amber colour, elegant aromas of long ageing and great evolved vinosity. In the mouth it is round, velvety, dry, very long and with an elegant finish.",
+    "alcoholStrength": "19",
+    "winePairing": "Stews, such as oxtail, with nuts, cheeses, sausages or as a digestive.",
+    "imgURL": "https://www.santacecilia.es/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/a/santa-cecilia-rio-viejo-oloroso-seco_5.jpg"
 }
+
+
 
 ###
 
-DELETE  http://localhost:9000/api/wines/6312417abfaf36399c44218a HTTP/1.1
+DELETE  http://localhost:9000/api/wines/6315f826321f20b517aedac2" HTTP/1.1
 
 
 
