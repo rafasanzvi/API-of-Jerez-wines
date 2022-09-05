@@ -45,13 +45,13 @@ POST http://localhost:9000/api/wines HTTP/1.1
 Content-Type: application/json
 
 {
-    "nameOfWine": "Papachanga",
-    "typeOfWine": "Fino",
-    "winery": "ololololdfgdfg",
+    "nameOfWine": "Río Viejo",
+    "typeOfWine": "Oloroso",
+    "winery": "Pedro Domecq",
     "typeOfGrape": "Palomino",
-    "description": "sfsddsfsddfg",
-    "alcoholStrength": "16",
-    "imgURL": "sdfsdfsddgd"
+    "description": "Deep and brilliant amber colour, elegant aromas of long ageing and great evolved vinosity. In the mouth it is round, velvety, dry, very long and with an elegant finish.",
+    "alcoholStrength": "19",
+    "imgURL": "https://www.santacecilia.es/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/a/santa-cecilia-rio-viejo-oloroso-seco_5.jpg"
 }
 
 ###

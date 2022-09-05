@@ -9,7 +9,7 @@ const wineSchema = mongoose.Schema({
     },
     typeOfWine: {
         type: String,
-        enum: ["Fino", "Amontillado", "Oloroso", "Palo Cortado", "Cream", "Moscatel", "Pedro Ximenez"],
+        enum: ["Fino", "Amontillado", "Oloroso", "Palo Cortado", "Cream", "Moscatel", "Dulce"],
         required: [true, "You must the type of wine"]
     },
     winery: {
