@@ -4,6 +4,7 @@ const router = require("express").Router()
 /* const Wine = require('../models/wine.model') */
 const wineSchema = require("../models/wine.model")
 
+//Create wine
 router.post('/wines', (req, res) => {
 
     /* const { nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL } = req.body */
@@ -15,6 +16,7 @@ router.post('/wines', (req, res) => {
         .catch(error => res.json({ message: error }));
 });
 
+//Get all wines from the list
 router.get('/wines', (req, res) => {
 
     wineSchema
@@ -22,6 +24,21 @@ router.get('/wines', (req, res) => {
         .then(data => res.json(data))
         .catch(error => res.json({ message: error }));
 });
+
+//Get a wine 
+router.get('/wines/:id', (req, res) => {
+
+    const { id } = req.params
+
+    wineSchema
+        .findById(id)
+        .then(data => res.json(data))
+        .catch(error => res.json({ message: error }));
+})
+
+
+
+
 
 
 
