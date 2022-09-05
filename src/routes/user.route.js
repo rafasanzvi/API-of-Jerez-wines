@@ -34,7 +34,7 @@ router.get('/users/:id', (req, res) => {
         .catch(error => res.json({ message: error }));
 });
 
-
+//Edit a user
 router.put('/users/:id', (req, res) => {
 
     const { id } = req.params

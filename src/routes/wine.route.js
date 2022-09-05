@@ -36,7 +36,18 @@ router.get('/wines/:id', (req, res) => {
         .catch(error => res.json({ message: error }));
 })
 
+//Edit a wine
+router.put('/wines/:id', (req, res) => {
 
+    const { id } = req.params
+
+    const { nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL } = req.body
+
+    wineSchema
+        .findByIdAndUpdate(id, { nameOfWine, typeOfWine, winery, typeOfGrape, description, alcoholStrength, imgURL })
+        .then(data => res.json(data))
+        .catch(error => res.json({ message: error }));
+})
 
 
 
