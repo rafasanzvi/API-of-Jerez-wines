@@ -62,6 +62,24 @@ GET http://localhost:9000/api/wines HTTP/1.1
 
 GET http://localhost:9000/api/wines/6312417abfaf36399c44218a HTTP/1.1
 
+###
+PUT  http://localhost:9000/api/wines/631251ff5f8c330c9aa0b5ab HTTP/1.1
+Content-Type: application/json
+
+{
+    "nameOfWine": "Río Viejo EL MEJORE",
+    "typeOfWine": "Fino",
+    "winery": "ololololdfgdfg",
+    "typeOfGrape": "Palomino",
+    "description": "sfsddsfsddfg",
+    "alcoholStrength": "16",
+    "imgURL": "sdfsdfsddgd"
+}
+
+###
+
+DELETE  http://localhost:9000/api/wines/6312417abfaf36399c44218a HTTP/1.1
+
 
 
 

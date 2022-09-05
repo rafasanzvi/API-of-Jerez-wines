@@ -49,6 +49,17 @@ router.put('/wines/:id', (req, res) => {
         .catch(error => res.json({ message: error }));
 })
 
+//Delete wine
+router.delete('/wines/:id', (req, res) => {
+
+    const { id } = req.params
+
+    wineSchema
+        .findOneAndDelete(id)
+        .then(data => res.json(data))
+        .catch(error => res.json({ message: error }));
+})
+
 
 
 
